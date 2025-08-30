@@ -1,0 +1,33 @@
+name: Voice CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate voice-manifest.json against schema (if present)
+        run: |
+          if [ -f data/voice-manifest.json ]; then
+            npx --yes ajv-cli validate -s schemas/voice-manifest.schema.json -d data/voice-manifest.json
+          else
+            echo "No data/voice-manifest.json found; skipping schema validation."
+          fi
+
+      - name: Lint naming conventions (if manifest present)
+        run: |
+          if [ -f data/voice-manifest.json ]; then
+            node scripts/lint-manifest.mjs
+          else
+            echo "No data/voice-manifest.json found; skipping lint."
+          fi
