@@ -1,0 +1,30 @@
+{
+  "roles": [
+    {
+      "role": "Narrator",
+      "track": "A",
+      "defaultPreset": "Warm / Friendly",
+      "clones": [
+        "Jason\u2013Warm v2",
+        "Jason\u2013Cinematic v2"
+      ]
+    },
+    {
+      "role": "Hero",
+      "track": "A",
+      "defaultPreset": "Urgent / Concerned",
+      "clones": [
+        "Jason\u2013Urgent v2",
+        "Jason\u2013Edge v2"
+      ]
+    },
+    {
+      "role": "Guide",
+      "track": "B",
+      "defaultPreset": "Cinematic / Inspirational",
+      "clones": [
+        "Jason\u2013Expressive v3"
+      ]
+    }
+  ]
+}
