@@ -21,4 +21,6 @@ package-lock.json
 /OfficialElevenLabsPaLM/obj
 /.vs/OfficialElevenLabsPaLM/CopilotIndices/17.14.1091.29919
 /.vs
-/OfficialElevenLabsPaLM/data/voice-manifest.json
+!/OfficialElevenLabsPaLM/data/voice-manifest.json
+
+/OfficialElevenLabsPaLM/wwwroot/data/voice-manifest.json
