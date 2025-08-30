@@ -1,0 +1,40 @@
+{
+  "project": "ExampleProject",
+  "version": "v1",
+  "narrationBlocks": [
+    {
+      "id": "NB0001",
+      "scene": "SC01",
+      "shot": "SH01",
+      "role": "Narrator",
+      "emotion": "Warm",
+      "text": "Hey, it\u2019s Jason. Thanks for being here today. Let\u2019s take a breath\u2026 and build something great together.",
+      "clone": "Jason\u2013Warm v2",
+      "preset": "Warm / Friendly",
+      "output": {
+        "file": "audio/voice/final/NB0001_Narrator_Warm_Jason-Warm-v2_v1.wav",
+        "durationSec": 4.2,
+        "sampleRate": 44100
+      }
+    },
+    {
+      "id": "NB0002",
+      "scene": "SC01",
+      "shot": "SH02",
+      "role": "Narrator",
+      "emotion": "Cinematic",
+      "text": "In the quiet between problems and solutions, there\u2019s a choice. We raise our preparation.",
+      "clone": "Jason\u2013Cinematic v2",
+      "preset": "Cinematic / Inspirational",
+      "overrides": {
+        "speed": -4,
+        "styleExaggeration": 0.55
+      },
+      "output": {
+        "file": "audio/voice/final/NB0002_Narrator_Cinematic_Jason-Cinematic-v2_v1.wav",
+        "durationSec": 5.1,
+        "sampleRate": 44100
+      }
+    }
+  ]
+}
