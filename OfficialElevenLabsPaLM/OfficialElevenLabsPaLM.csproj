@@ -33,6 +33,7 @@
   </ItemGroup>
 
   <Target Name="CopyVoiceManifestToWwwroot" AfterTargets="Build">
+    <MakeDir Directories="wwwroot\data" />
     <Copy SourceFiles="data\voice-manifest.json"
           DestinationFiles="wwwroot\data\voice-manifest.json"
           SkipUnchangedFiles="true" />

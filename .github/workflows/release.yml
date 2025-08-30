@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+
+      - name: Upload assets (if present)
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            OfficialElevenLabsPaLM/ElevenLabs_Batch_Helper_and_ProClone_v1.zip
+            OfficialElevenLabsPaLM/Official_ElevenLabs_PaLM_v1.zip
+            OfficialElevenLabsPaLM/Official_ElevenLabs_PaLM_CI_Addon_v1.zip
+        continue-on-error: true
