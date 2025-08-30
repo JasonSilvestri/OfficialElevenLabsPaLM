@@ -21,11 +21,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Validate voice-manifest.json against schema (if present)
+      - name: Validate voice-manifest.json against schema (2020-12)
         working-directory: OfficialElevenLabsPaLM
         run: |
           if [ -f data/voice-manifest.json ]; then
-            npx --yes ajv-cli validate -s schemas/voice-manifest.schema.json -d data/voice-manifest.json
+            npx --yes ajv-cli@5 validate \
+              --spec=draft2020 \
+              -s schemas/voice-manifest.schema.json \
+              -d data/voice-manifest.json
           else
             echo "No data/voice-manifest.json found; skipping schema validation."
           fi
