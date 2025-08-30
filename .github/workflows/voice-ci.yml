@@ -2,8 +2,13 @@ name: Voice CI
 
 on:
   push:
-    branches: ["**"]
+    paths:
+      - 'OfficialElevenLabsPaLM/**'
+      - '.github/workflows/voice-ci.yml'
   pull_request:
+    paths:
+      - 'OfficialElevenLabsPaLM/**'
+      - '.github/workflows/voice-ci.yml'
 
 jobs:
   validate:
@@ -17,6 +22,7 @@ jobs:
           node-version: '20'
 
       - name: Validate voice-manifest.json against schema (if present)
+        working-directory: OfficialElevenLabsPaLM
         run: |
           if [ -f data/voice-manifest.json ]; then
             npx --yes ajv-cli validate -s schemas/voice-manifest.schema.json -d data/voice-manifest.json
@@ -25,9 +31,10 @@ jobs:
           fi
 
       - name: Lint naming conventions (if manifest present)
+        working-directory: OfficialElevenLabsPaLM
         run: |
           if [ -f data/voice-manifest.json ]; then
-            node scripts/lint-manifest.mjs
+            node ../scripts/lint-manifest.mjs
           else
             echo "No data/voice-manifest.json found; skipping lint."
           fi
