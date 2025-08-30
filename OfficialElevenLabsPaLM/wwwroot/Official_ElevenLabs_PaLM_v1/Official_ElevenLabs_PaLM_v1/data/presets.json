@@ -1,0 +1,84 @@
+{
+  "presets": [
+    {
+      "name": "Neutral / Baseline",
+      "speed": 0,
+      "stability": 0.68,
+      "similarity": 0.85,
+      "styleExaggeration": 0.2,
+      "speakerBoost": true
+    },
+    {
+      "name": "Warm / Friendly",
+      "speed": -6,
+      "stability": 0.64,
+      "similarity": 0.8,
+      "styleExaggeration": 0.35,
+      "speakerBoost": true
+    },
+    {
+      "name": "Excited / Hype",
+      "speed": 12,
+      "stability": 0.4,
+      "similarity": 0.75,
+      "styleExaggeration": 0.7,
+      "speakerBoost": true
+    },
+    {
+      "name": "Urgent / Concerned",
+      "speed": 10,
+      "stability": 0.5,
+      "similarity": 0.8,
+      "styleExaggeration": 0.45,
+      "speakerBoost": true
+    },
+    {
+      "name": "Empathy / Reassurance",
+      "speed": -12,
+      "stability": 0.72,
+      "similarity": 0.85,
+      "styleExaggeration": 0.25,
+      "speakerBoost": false
+    },
+    {
+      "name": "Deadpan / Sarcastic",
+      "speed": 0,
+      "stability": 0.82,
+      "similarity": 0.9,
+      "styleExaggeration": 0.1,
+      "speakerBoost": false
+    },
+    {
+      "name": "Whisper / Aside",
+      "speed": -10,
+      "stability": 0.6,
+      "similarity": 0.85,
+      "styleExaggeration": 0.2,
+      "speakerBoost": false
+    },
+    {
+      "name": "Cinematic / Inspirational",
+      "speed": -6,
+      "stability": 0.6,
+      "similarity": 0.8,
+      "styleExaggeration": 0.5,
+      "speakerBoost": true
+    },
+    {
+      "name": "Fast Promo Read",
+      "speed": 16,
+      "stability": 0.45,
+      "similarity": 0.8,
+      "styleExaggeration": 0.6,
+      "speakerBoost": true
+    },
+    {
+      "name": "Edge / Grit (Low Register)",
+      "speed": -2,
+      "stability": 0.66,
+      "similarity": 0.85,
+      "styleExaggeration": 0.35,
+      "speakerBoost": true
+    }
+  ]
+}

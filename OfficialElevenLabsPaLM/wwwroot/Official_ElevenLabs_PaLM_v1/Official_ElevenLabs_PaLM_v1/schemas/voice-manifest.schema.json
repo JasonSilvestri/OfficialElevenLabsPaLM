@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Voice Manifest",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "narrationBlocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scene",
+          "shot",
+          "role",
+          "text",
+          "clone",
+          "preset",
+          "output"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^NB\\d{4}$"
+          },
+          "scene": {
+            "type": "string"
+          },
+          "shot": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "emotion": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "clone": {
+            "type": "string"
+          },
+          "preset": {
+            "type": "string"
+          },
+          "overrides": {
+            "type": "object",
+            "properties": {
+              "speed": {
+                "type": "number"
+              },
+              "stability": {
+                "type": "number"
+              },
+              "similarity": {
+                "type": "number"
+              },
+              "styleExaggeration": {
+                "type": "number"
+              },
+              "speakerBoost": {
+                "type": "boolean"
+              }
+            }
+          },
+          "output": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string"
+              },
+              "durationSec": {
+                "type": "number"
+              },
+              "sampleRate": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "file"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "project",
+    "version",
+    "narrationBlocks"
+  ]
+}

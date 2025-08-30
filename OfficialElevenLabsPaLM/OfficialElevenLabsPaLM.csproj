@@ -4,6 +4,17 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Title>The Official ElevenLabs PaLM{} RCL (Razor Class Library)</Title>
+    <Authors>Jason Silvestri</Authors>
+    <Product>The Official ElevenLabs PaLM{} RCL</Product>
+    <Description>The Official ElevenLabs PaLM{} RCL is a structured framework designed to streamline the process of creating and managing voice clones, emotion presets, and rendering workflows using ElevenLabs' text-to-speech technology.</Description>
+    <PackageReleaseNotes>The Official ElevenLabs PaLM{} is a structured framework designed to streamline the process of creating and managing voice clones, emotion presets, and rendering workflows using ElevenLabs' text-to-speech technology.</PackageReleaseNotes>
+    <Copyright>Copyright © 2025 - All Rights Reserved by Jason Silvestri</Copyright>
+    <PackageProjectUrl>https://github.com/JasonSilvestri/OfficialElevenLabsPaLM</PackageProjectUrl>
+    <PackageReadmeFile></PackageReadmeFile>
+    <RepositoryUrl>https://github.com/JasonSilvestri/OfficialElevenLabsPaLM.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>PaLM;PLM AI Lifecycle Models;Eleven Labs; Jason Silvestri; AI; PLM Models</PackageTags>
   </PropertyGroup>
 
 
